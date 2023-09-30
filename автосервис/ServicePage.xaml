@@ -13,7 +13,11 @@
             <Border.Effect>
                 <DropShadowEffect BlurRadius="30" Color="Gray"/>
             </Border.Effect>
-            <Button Content="Go" Height="30" Width="175" Background="Orange" BorderBrush="Black" Click="Button_Click"/>
+            <Button Content="Go"  Height="30" Width="175" Background="Orange" BorderBrush="Black" Click="Button_Click">
+                <Button.Effect>
+                    <DropShadowEffect BlurRadius="30" ShadowDepth="0" Color="LightGray"/>
+                </Button.Effect>
+            </Button>
         </Border>
     </Grid>
 </Page>
