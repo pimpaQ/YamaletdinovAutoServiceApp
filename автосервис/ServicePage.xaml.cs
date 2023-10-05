@@ -23,6 +23,8 @@ namespace автосервис
         public ServicePage()
         {
             InitializeComponent();
+            var currentServices = Yamaletdinov_AutoServiceEntities.GetContext().Service.ToList();
+            ServiceListView.ItemsSource = currentServices;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

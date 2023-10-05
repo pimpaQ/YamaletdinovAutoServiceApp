@@ -31,5 +31,17 @@ namespace автосервис
         {
             Manager.MainFrame.GoBack();
         }
+
+        private void MainFrame_ContentRendered(object sender, EventArgs e)
+        {
+            if(MainFrame.CanGoBack)
+            {
+                Btn_Back.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                Btn_Back.Visibility = Visibility.Hidden;
+            }
+        }
     }
 }
