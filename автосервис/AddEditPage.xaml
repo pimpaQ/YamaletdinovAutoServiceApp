@@ -15,5 +15,6 @@
             </Border.Effect>
             <TextBlock Text="Hello!" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30" FontWeight="Bold"/>
         </Border>
+        <Button/>
     </Grid>
 </Page>
