@@ -15,6 +15,6 @@
         <Image Source="/Resources/service_logo.png" HorizontalAlignment="Left"></Image>
         <TextBlock Text="Услуги автосервиса" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Tv Cen MT" Foreground="Black" />
         <Frame Name="MainFrame" Grid.Row="1" ContentRendered="MainFrame_ContentRendered" NavigationUIVisibility="Hidden"/>
-        <Button Content="Back" Name="Btn_Back" FontSize="20" Width="175" Height="30" HorizontalAlignment="Right" Margin="5" Click="BtnBack_Click" Style="{StaticResource MaterialDesignFlatButton}" />
+        <Button Content="Назад" Name="Btn_Back" FontSize="20" Width="175" Height="30" HorizontalAlignment="Right" Margin="5" Click="BtnBack_Click" Style="{StaticResource MaterialDesignFlatButton}" />
     </Grid>
 </Window>
