@@ -39,7 +39,7 @@ namespace автосервис
             if (_currentService.Cost == 0)
                 errors.AppendLine("Укажите стоимость услуги");
 
-            if (_currentService.Discount == null || _currentService.Discount == 0)
+            if (_currentService.Discount == null)
                 errors.AppendLine("Укажите скидку");
 
             if (string.IsNullOrWhiteSpace(_currentService.Duration))

@@ -13,7 +13,21 @@
             <RowDefinition Height="auto"></RowDefinition>
             <RowDefinition Height="auto"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
         </Grid.RowDefinitions>
+        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Right">
+            <TextBlock Name="TBCount" FontSize="12" Height="20"/>
+            <TextBlock Name="TBAllRecords" FontSize="12" Height="20"/>
+            <Button Name="LeftDirButton" Content="&lt;" FontSize="12" Width="20" Height="20" Click = "LeftDirButton_Click" BorderBrush="Black" />
+            <ListBox FontSize="12" Name="PageListBox" MouseUp="PageListBox_MouseUp">
+                <ListBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel Orientation="Horizontal"/>
+                    </ItemsPanelTemplate>   
+                </ListBox.ItemsPanel>
+            </ListBox>
+            <Button Name="RightDirButton" Content = "&gt;" FontSize="12" Width="20" Height="20" Click="RightDirButton_Click"/>
+        </StackPanel>
         <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center">
             <StackPanel Margin="10" Orientation="Horizontal">
                 <TextBlock Text="Введите название для поиска" TextAlignment="Right" Width="300" FontSize="15"/>
@@ -50,12 +64,12 @@
                             <RowDefinition Height="*"/>
                             <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
-                        <Image Width="100" Grid.Column="0" Stretch="UniformToFill" HorizontalAlignment="Center">
+                        <Image Width="200" Grid.Column="0" Grid.RowSpan="4" Stretch="UniformToFill" HorizontalAlignment="Center">
                             <Image.Source>
                                 <Binding Path="MainImagePath">
                                     <Binding.TargetNullValue>
                                         <ImageSource>
-                                            Resources/service_logo.ico
+                                            Resources/picture.png
                                         </ImageSource>
                                     </Binding.TargetNullValue>
                                 </Binding>
@@ -67,7 +81,7 @@
                         <TextBlock Text="{Binding Discount, StringFormat=*скидка {0} %}" Opacity="{Binding Discount}" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" FontSize="16"/>
                         <StackPanel Grid.Column="1" Grid.Row="3" Orientation="Horizontal">
                             <Button Name="EditButton" Click="EditButton_Click" Content="Редактировать" Margin="2" BorderThickness="1" Foreground="Black" Background="#FFFF9C1A" BorderBrush="Black" Style="{StaticResource MaterialDesignRaisedSecondaryDarkButton}"/>
-                            <Button Name="DeleteButton" Content="Удалить" Margin="2" BorderThickness="1" Background="#FFFF9C1A" Foreground="Black" BorderBrush="Black" Style="{StaticResource MaterialDesignRaisedButton}"/>
+                            <Button Name="DeleteButton" Content="Удалить" Margin="2" BorderThickness="1" Background="#FFFF9C1A" Foreground="Black" BorderBrush="Black" Click="DeleteButton_Click" Style="{StaticResource MaterialDesignRaisedButton}"/>
                         </StackPanel>
                     </Grid>
                 </DataTemplate>
