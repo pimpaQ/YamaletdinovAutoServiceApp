@@ -16,18 +16,18 @@ namespace автосервис
     public partial class Yamaletdinov_AutoServiceEntities : DbContext
     {
         private static Yamaletdinov_AutoServiceEntities _context;
-
         public static Yamaletdinov_AutoServiceEntities GetContext()
         {
-            if (_context == null)
+            if(_context == null)
+            {
                 _context = new Yamaletdinov_AutoServiceEntities();
+            }
             return _context;
         }
         public Yamaletdinov_AutoServiceEntities()
             : base("name=Yamaletdinov_AutoServiceEntities")
         {
         }
-        
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
